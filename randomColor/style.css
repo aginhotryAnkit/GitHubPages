@@ -1,0 +1,11 @@
+.random{
+    height: 100px;
+    width: 100px;
+    border: 1px dotted black;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    top: 10px;
+    font-size: 12px;
+    font-style: bold;
+}
