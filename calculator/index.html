@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- <label id="switch">Darkmode</label><img src="moon.png" alt=""> -->
+        <h2>Standard Calculator</h2>
+        <p id="rs">Result</p>
+        <input type="text" name="" id="display">
+        <!-- <button id="cpy" onclick="cpydata()">copy result</button> -->
+        <div id="main">
+
+            <div class="button" id="green" onclick='clearr()'><p>C</p></div>
+            <div class="button" id="green" onclick="notworking()"><p>+/-</p></div>
+            <div class="button" id="green" onclick="op('%')"><p>%</p></div>
+            <div class="button" id="green" onclick="op('/')"><p>/</p></div>
+            <div class="button" onclick="display('7')"><p>7</p></div>
+            <div class="button" onclick="display('8')"><p>8</p></div>
+            <div class="button" onclick="display('9')"><p>9</p></div>
+            <div class="button" id="green" onclick="op('*')"><p>*</p></div>
+            <div class="button" onclick="display('4')"><p>4</p></div>
+            <div class="button" onclick="display('5')"><p>5</p></div>
+            <div class="button" onclick="display('6')"><p>6</p></div>
+            <div class="button" id="green" onclick="op('-')"><p>-</p></div>
+            <div class="button" onclick="display('1')"><p>1</p></div>
+            <div class="button" onclick="display('2')"><p>2</p></div>
+            <div class="button" onclick="display('3')"><p>3</p></div>
+            <div class="button" id="green" onclick="op('+')"><p>+</p></div>
+            <div class="button" id="zero" onclick="display('0')"><p>0</p></div>
+            <div class="button" onclick="display('.')"><p>.</p></div>
+            <div class="button" onclick="evaluateE()" id="green" style="background-color: rgb(228, 189, 189); color: red;"><p>=</p></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

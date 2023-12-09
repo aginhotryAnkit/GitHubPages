@@ -1,0 +1,89 @@
+#container {
+  height: 700px;
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  background-color: rgb(253, 254, 255);
+  border: 1px solid green;
+}
+
+#display {
+  height: 100px;
+  width: 390px;
+  margin-left: auto;
+  margin-top: 100px;
+  font-size: 50px;
+  text-align: right;
+  border: 1px solid gray;
+}
+
+.button {
+  height: 80px;
+  width: 80px;
+  background-color: gainsboro;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+#main {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#green {
+  background-color: rgb(214, 231, 214);
+  color: rgb(49, 216, 49);
+}
+#zero {
+  width: 170px;
+}
+
+/* img{
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin-top: 10px;
+    margin-left: 30px;
+} */
+/* #switch{
+    float: right;
+} */
+
+#green:hover {
+  background-color: rgb(186, 221, 186);
+}
+.button:hover {
+  background-color: rgb(179, 174, 174);
+}
+p {
+  margin-top: 32px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+#equal {
+  background-color: rgb(223, 128, 128);
+}
+h2 {
+  position: absolute;
+  color: lightsalmon;
+  top: 50px;
+  font-family: sans-serif;
+  margin-left: 10px;
+}
+#rs {
+  position: absolute;
+  top: 125px;
+  color: gray;
+}
+#cpy {
+  float: right;
+  padding: 5px 6px;
+  font-size: 13px;
+}
+
+#container:hover{
+    background-color: black;
+    transition-duration: 3s;
+}
