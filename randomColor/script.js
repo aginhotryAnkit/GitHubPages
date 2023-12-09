@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  console.log("cdn working ...");
+  console.log("ANKIT AGINHOTRY");
   var width = window.innerWidth;
   var height = window.innerHeight;
   console.log("Height: ",height);
