@@ -1,178 +1,59 @@
 $(document).ready(function () {
-    console.log("cdn working ...");
+  console.log("cdn working ...");
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  console.log("Height: ",height);
+  console.log("Width: ",width);
+  console.log("Height*Width :",height*width);
+  var numberOfBoxHorizental=(width/115);
+  var numberOfBoxVertical=(height/115);
+  var totalBox=numberOfBoxVertical*numberOfBoxHorizental;
+  var htm="";
+  for (let i = 0; i <(totalBox); i++) {
+    htm+="<div id='rd"+i+"' class='random'></div>";
+  }
+  $("body").html(htm);
+  var divlength = $("body").children().length;
 
-    var divlength = $(".main").children().length;
-    function randomColor(){
-        let colors = [
-            "AliceBlue",
-            "AntiqueWhite",
-            "Aqua",
-            "Aquamarine",
-            "Azure",
-            "Beige",
-            "Bisque",
-            "Black",
-            "BlanchedAlmond",
-            "Blue",
-            "BlueViolet",
-            "Brown",
-            "BurlyWood",
-            "CadetBlue",
-            "Chartreuse",
-            "Chocolate",
-            "Coral",
-            "CornflowerBlue",
-            "Cornsilk",
-            "Crimson",
-            "Cyan",
-            "DarkBlue",
-            "DarkCyan",
-            "DarkGoldenRod",
-            "DarkGray",
-            "DarkGrey",
-            "DarkGreen",
-            "DarkKhaki",
-            "DarkMagenta",
-            "DarkOliveGreen",
-            "DarkOrange",
-            "DarkOrchid",
-            "DarkRed",
-            "DarkSalmon",
-            "DarkSeaGreen",
-            "DarkSlateBlue",
-            "DarkSlateGray",
-            "DarkSlateGrey",
-            "DarkTurquoise",
-            "DarkViolet",
-            "DeepPink",
-            "DeepSkyBlue",
-            "DimGray",
-            "DimGrey",
-            "DodgerBlue",
-            "FireBrick",
-            "FloralWhite",
-            "ForestGreen",
-            "Fuchsia",
-            "Gainsboro",
-            "GhostWhite",
-            "Gold",
-            "GoldenRod",
-            "Gray",
-            "Grey",
-            "Green",
-            "GreenYellow",
-            "HoneyDew",
-            "HotPink",
-            "IndianRed",
-            "Indigo",
-            "Ivory",
-            "Khaki",
-            "Lavender",
-            "LavenderBlush",
-            "LawnGreen",
-            "LemonChiffon",
-            "LightBlue",
-            "LightCoral",
-            "LightCyan",
-            "LightGoldenRodYellow",
-            "LightGray",
-            "LightGrey",
-            "LightGreen",
-            "LightPink",
-            "LightSalmon",
-            "LightSeaGreen",
-            "LightSkyBlue",
-            "LightSlateGray",
-            "LightSlateGrey",
-            "LightSteelBlue",
-            "LightYellow",
-            "Lime",
-            "LimeGreen",
-            "Linen",
-            "Magenta",
-            "Maroon",
-            "MediumAquaMarine",
-            "MediumBlue",
-            "MediumOrchid",
-            "MediumPurple",
-            "MediumSeaGreen",
-            "MediumSlateBlue",
-            "MediumSpringGreen",
-            "MediumTurquoise",
-            "MediumVioletRed",
-            "MidnightBlue",
-            "MintCream",
-            "MistyRose",
-            "Moccasin",
-            "NavajoWhite",
-            "Navy",
-            "OldLace",
-            "Olive",
-            "OliveDrab",
-            "Orange",
-            "OrangeRed",
-            "Orchid",
-            "PaleGoldenRod",
-            "PaleGreen",
-            "PaleTurquoise",
-            "PaleVioletRed",
-            "PapayaWhip",
-            "PeachPuff",
-            "Peru",
-            "Pink",
-            "Plum",
-            "PowderBlue",
-            "Purple",
-            "RebeccaPurple",
-            "Red",
-            "RosyBrown",
-            "RoyalBlue",
-            "SaddleBrown",
-            "Salmon",
-            "SandyBrown",
-            "SeaGreen",
-            "SeaShell",
-            "Sienna",
-            "Silver",
-            "SkyBlue",
-            "SlateBlue",
-            "SlateGray",
-            "SlateGrey",
-            "Snow",
-            "SpringGreen",
-            "SteelBlue",
-            "Tan",
-            "Teal",
-            "Thistle",
-            "Tomato",
-            "Turquoise",
-            "Violet",
-            "Wheat",
-            "White",
-            "WhiteSmoke",
-            "Yellow",
-            "YellowGreen"
-        ]
-        $(".main").children().each(function() {
-            var childID = $(this).attr("id");
-            var randomNumber = Math.floor(Math.random(1,colors.length)*colors.length);
-            $("#"+childID).css("background-color", colors[randomNumber]);
-            $("#"+childID).text(colors[randomNumber]);
-        });
+  console.log("sdsdsdsd",divlength);
+  function randomColor() {
+    $("body")
+      .children()
+      .each(function () {
+        var childID = $(this).attr("id");
+        $("#" + childID).css("background-color", getRandomColor());
+        $("#" + childID).text(getRandomColor());
+      });
+  }
+  randomColor();
+
+  //random color generatin using jquery funciton
+  function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
     }
-    randomColor();
+    return color;
+  }
+  console.log(getRandomColor());
+  var priviousValue = "";
+  $(".random").click(function (e) {
+    var childID = $(this).attr("id");
 
+    if(priviousValue!=="" && childID!==priviousValue){
+      $("#"+priviousValue).css("transform", "scale3d(1,1,1)");
+      $("#"+priviousValue).css("transition-duration", "0.3s");
+      console.log("i am here", priviousValue);
+    } 
 
+      $("#"+childID).css("transform", "scale3d(1.5,1.5,1)");
+      console.log(childID);
+      priviousValue = childID;
+  });
+  console.log("priviousValue :",priviousValue);
 
-    //random color generatin using jquery funciton 
-    function getRandomColor() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
-
-      console.log(getRandomColor());
+  $(".random").on("focusout", function() {
+    console.log("random focusout");
+  });
 });
