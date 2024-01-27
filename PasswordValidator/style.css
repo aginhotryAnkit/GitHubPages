@@ -4,12 +4,12 @@ body{
 }
 
 .container{
-    height: 32rem;
+    height: 35rem;
     width: 28rem;
     position: relative;
     background-color: white;
     border-radius: 8%;
-    top:10rem
+    top:2rem
 }
 
 .innerContainer{
@@ -89,4 +89,9 @@ img{
     width: 50px;
     margin-top: -10px;
     margin-bottom: 20px;
+}
+
+.nameTit{
+    color: #993441;
+    letter-spacing:2px;
 }
