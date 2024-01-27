@@ -1,0 +1,102 @@
+body{
+    background-color: #dfddd9;
+    font-family: sans-serif;
+}
+
+.container{
+    height: 35rem;
+    width: 28rem;
+    position: relative;
+    background-color: white;
+    border-radius: 8%;
+    top:2rem
+}
+
+.innerContainer{
+    padding: 40px 20px;
+}
+
+.textArea{
+    margin-top: 1rem;
+}
+
+.passLengthCal{
+    margin-top: 1rem;
+}
+
+.pass{
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.showBtn{
+    cursor: pointer;
+    padding: 6px 32px;
+}
+.genBtn{
+    cursor: pointer;
+    padding: 6px 20px;
+}
+
+.progress-bar {
+    width:65%;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.progress {
+    width: 0;
+    height: 8px;
+    transition-duration: 0.8s;
+}
+
+.warningArea{
+    position: relative;
+    top: 2rem;
+}
+
+.warTit{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+li{
+  font-weight: bold;  
+  opacity: 70%;
+  color: grey;
+  transition-duration:1s;
+}
+
+ul{
+    list-style-type: disc;
+    font-size:16px;
+}
+
+.createBtn{
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: 'HelveticaNowMTText', Helvetica, Arial, sans-serif;;
+}
+
+.tit{
+    color: #993441
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.nameTit{
+    color: #993441;
+    letter-spacing:2px;
+}
