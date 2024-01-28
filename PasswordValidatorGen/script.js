@@ -32,31 +32,36 @@ $(document).ready(function () {
 
     function validator(currentVal){
         currentVal = currentVal.replace(/\s/g, '');
-        let countSpacialCharDup = [];
+        let duplicate = [];
         let countSpacialCharCount = 0;
         let upperCaseCharCount = 0;
         let lowerCaseCharCount = 0;
         let numericCount = 0;
+        let result = 0;
 
         //count the special char from the given text
         currentVal.split("").map((ele,acc)=>{
-            if(specialCharacters.includes(ele) && !countSpacialCharDup.includes(ele)){
+            if(specialCharacters.includes(ele) && !duplicate.includes(ele)){
                 countSpacialCharCount+=1;
-                countSpacialCharDup.push(ele);
-            }else if(ele.charCodeAt(0)>=65 && ele.charCodeAt(0)<=90){
+            }else if(ele.charCodeAt(0)>=65 && ele.charCodeAt(0)<=90 && !duplicate.includes(ele)){
                 upperCaseCharCount+=1;
-            }else if(ele.charCodeAt(0)>=97 && ele.charCodeAt(0)<=122){
+            }else if(ele.charCodeAt(0)>=97 && ele.charCodeAt(0)<=122 && !duplicate.includes(ele)){
                 lowerCaseCharCount+=1;
-            } else{
+            } else if(!duplicate.includes(ele)){
                 numericCount+=1;
             }
+            duplicate.push(ele);
         }, 0);
 
-        let result = countSpacialCharCount*20+upperCaseCharCount*5+lowerCaseCharCount*5+numericCount*5;
+        result += countSpacialCharCount*19+upperCaseCharCount*5+lowerCaseCharCount*5+numericCount*5;
+        console.log(result);
         if(result>100){
+            console.log(result);
             result = 100;
            
         }
+
+
         if(result>=0 && result<=30){
             //poor
             $(".progress").css("width", "30%");
@@ -106,12 +111,12 @@ $(document).ready(function () {
             $(".progress").css("width", "0%");
         }
 
-        console.log("total result =", result);
-        console.log(currentVal[currentVal.length-1]);
-        console.log("Spacial Character :", countSpacialCharCount);
-        console.log("Uppercase :", upperCaseCharCount);
-        console.log("Lowercase :", lowerCaseCharCount);
-        console.log("Numeric :", numericCount);
+        // console.log("total result =", result);
+        // console.log(currentVal[currentVal.length-1]);
+        // console.log("Spacial Character :", countSpacialCharCount);
+        // console.log("Uppercase :", upperCaseCharCount);
+        // console.log("Lowercase :", lowerCaseCharCount);
+        // console.log("Numeric :", numericCount);
     }
 
 
