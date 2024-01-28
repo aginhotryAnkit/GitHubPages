@@ -11,11 +11,10 @@ $(document).ready(function () {
     var password = true;
     $(".progress").css("width", "30%");
 
-    $(".pass").keypress(function (e) { 
+    $(".pass").keyup(function (e) { 
         let currentVal = $(this).val();
         validator(currentVal);
     });
-
 
     //hide the password
     $(".pass").click(function (e) { 
@@ -103,10 +102,11 @@ $(document).ready(function () {
 
         }
 
-
+        if(currentVal.length==0){
+            $(".progress").css("width", "0%");
+        }
 
         console.log("total result =", result);
-
         console.log(currentVal[currentVal.length-1]);
         console.log("Spacial Character :", countSpacialCharCount);
         console.log("Uppercase :", upperCaseCharCount);
@@ -139,6 +139,12 @@ $(document).ready(function () {
         let password = generateRandomStrongPassword(Math.floor(Math.random() * 3)+8)
         $(".pass").val(password);
         validator(password);
+    });
+
+    $(".pass").keydown(function (e) { 
+        let currentVal = $(this).val();
+        console.log("hello");
+        validator(currentVal);
     });
 
 });
