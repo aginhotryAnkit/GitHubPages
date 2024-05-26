@@ -53,18 +53,49 @@ section h2 {
         <section>
             <h2>String Functions</h2>
             <ul>
-                <li><strong>charAt():</strong> Returns the character at the specified index.</li>
-                <li><strong>concat():</strong> Joins two or more strings.</li>
-                <li><strong>includes():</strong> Checks if a string contains another string.</li>
-                <li><strong>indexOf():</strong> Returns the index of the first occurrence of a specified value.</li>
-                <li><strong>replace():</strong> Replaces a specified value with another value in a string.</li>
-                <li><strong>split():</strong> Splits a string into an array of substrings.</li>
-                <li><strong>substring():</strong> Extracts characters from a string between two specified indices.</li>
-                <li><strong>toLowerCase():</strong> Converts a string to lowercase.</li>
-                <li><strong>toUpperCase():</strong> Converts a string to uppercase.</li>
-                <li><strong>trim():</strong> Removes whitespace from both ends of a string.</li>
+                <li>
+                    <strong>charAt():</strong> Returns the character at the specified index.
+                    <pre><code>let str = "Hello";<br>console.log(str.charAt(1)); // "e"</code></pre>
+                </li>
+                <li>
+                    <strong>concat():</strong> Joins two or more strings.
+                    <pre><code>let str1 = "Hello";<br>let str2 = " World";<br>console.log(str1.concat(str2)); // "Hello World"</code></pre>
+                </li>
+                <li>
+                    <strong>includes():</strong> Checks if a string contains another string.
+                    <pre><code>let str = "Hello World";<br>console.log(str.includes("World")); // true</code></pre>
+                </li>
+                <li>
+                    <strong>indexOf():</strong> Returns the index of the first occurrence of a specified value.
+                    <pre><code>let str = "Hello World";<br>console.log(str.indexOf("World")); // 6</code></pre>
+                </li>
+                <li>
+                    <strong>replace():</strong> Replaces a specified value with another value in a string.
+                    <pre><code>let str = "Hello World";<br>console.log(str.replace("World", "JavaScript")); // "Hello JavaScript"</code></pre>
+                </li>
+                <li>
+                    <strong>split():</strong> Splits a string into an array of substrings.
+                    <pre><code>let str = "Hello World";<br>console.log(str.split(" ")); // ["Hello", "World"]</code></pre>
+                </li>
+                <li>
+                    <strong>substring():</strong> Extracts characters from a string between two specified indices.
+                    <pre><code>let str = "Hello World";<br>console.log(str.substring(0, 5)); // "Hello"</code></pre>
+                </li>
+                <li>
+                    <strong>toLowerCase():</strong> Converts a string to lowercase.
+                    <pre><code>let str = "Hello World";<br>console.log(str.toLowerCase()); // "hello world"</code></pre>
+                </li>
+                <li>
+                    <strong>toUpperCase():</strong> Converts a string to uppercase.
+                    <pre><code>let str = "Hello World";<br>console.log(str.toUpperCase()); // "HELLO WORLD"</code></pre>
+                </li>
+                <li>
+                    <strong>trim():</strong> Removes whitespace from both ends of a string.
+                    <pre><code>let str = "  Hello World  ";<br>console.log(str.trim()); // "Hello World"</code></pre>
+                </li>
             </ul>
         </section>
+        
         <section>
             <h2>Array Functions</h2>
             <ul>
